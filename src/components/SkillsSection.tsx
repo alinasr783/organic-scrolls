@@ -1,106 +1,94 @@
-import { Code2, Palette, Database, Globe, Smartphone, Zap } from "lucide-react";
+import { Code2, Palette, Smartphone, Globe, Figma, Zap } from "lucide-react";
 
 export const SkillsSection = () => {
   const skills = [
     {
-      name: "Frontend Development",
-      icon: Code2,
-      level: 95,
-      description: "React, TypeScript, Next.js"
-    },
-    {
       name: "UI/UX Design",
       icon: Palette,
+      level: 95,
+      description: "User-centered design principles"
+    },
+    {
+      name: "Prototyping",
+      icon: Figma,
       level: 90,
-      description: "Figma, Adobe Creative Suite"
+      description: "Interactive prototypes & wireframes"
     },
     {
-      name: "Backend Development",
-      icon: Database,
+      name: "Frontend Development",
+      icon: Code2,
       level: 85,
-      description: "Node.js, Python, PostgreSQL"
+      description: "HTML, CSS, JavaScript, React"
     },
     {
-      name: "Web Performance",
-      icon: Zap,
-      level: 88,
-      description: "Optimization, SEO, Analytics"
-    },
-    {
-      name: "Mobile Development",
+      name: "Mobile Design",
       icon: Smartphone,
-      level: 80,
-      description: "React Native, Flutter"
+      level: 88,
+      description: "iOS & Android app design"
     },
     {
-      name: "Full-Stack Solutions",
+      name: "Web Design",
       icon: Globe,
       level: 92,
-      description: "End-to-end development"
+      description: "Responsive web interfaces"
+    },
+    {
+      name: "Design Systems",
+      icon: Zap,
+      level: 87,
+      description: "Scalable design frameworks"
     }
   ];
 
   return (
-    <section id="skills" className="py-24 bg-gradient-to-b from-secondary/20 to-background">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-16 animate-grow">
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Skills & Expertise
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Cultivated through years of practice, like rings in a tree
-            </p>
-            <div className="w-24 h-1 bg-gradient-nature rounded-full mx-auto mt-6"></div>
-          </div>
+    <section id="skills" className="py-24 px-6 bg-secondary/20">
+      <div className="max-w-6xl mx-auto">
+        {/* Section Header */}
+        <div className="mb-16">
+          <h2 className="font-display text-display font-bold text-accent mb-6 animate-slide-up text-center">
+            skills.
+          </h2>
+        </div>
 
-          {/* Skills Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {skills.map((skill, index) => (
-              <div 
-                key={index}
-                className="nature-card p-6 group hover:scale-105 transition-all duration-500"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {/* Icon */}
-                <div className="w-16 h-16 bg-gradient-leaf rounded-full flex items-center justify-center mb-6 shadow-soft group-hover:shadow-nature transition-all duration-300">
-                  <skill.icon className="w-8 h-8 text-white group-hover:animate-ripple" />
+        {/* Skills Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {skills.map((skill, index) => (
+            <div 
+              key={index}
+              className="clean-card p-6 animate-slide-up"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              {/* Icon */}
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                <skill.icon className="w-6 h-6 text-primary-foreground" />
+              </div>
+
+              {/* Content */}
+              <h3 className="font-semibold text-lg text-foreground mb-2">
+                {skill.name}
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                {skill.description}
+              </p>
+
+              {/* Progress Bar */}
+              <div className="space-y-2">
+                <div className="flex justify-between items-center">
+                  <span className="text-sm font-medium text-foreground">Proficiency</span>
+                  <span className="text-sm font-bold text-primary">{skill.level}%</span>
                 </div>
-
-                {/* Content */}
-                <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-                  {skill.name}
-                </h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  {skill.description}
-                </p>
-
-                {/* Progress Bar */}
-                <div className="relative">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm font-medium text-foreground">Progress</span>
-                    <span className="text-sm font-bold text-primary">{skill.level}%</span>
-                  </div>
-                  <div className="w-full h-3 bg-muted rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-gradient-nature rounded-full transition-all duration-1000 ease-out shadow-inner"
-                      style={{ 
-                        width: `${skill.level}%`,
-                        animationDelay: `${index * 0.2}s`
-                      }}
-                    ></div>
-                  </div>
+                <div className="w-full h-2 bg-muted rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-primary rounded-full transition-all duration-1000 ease-out"
+                    style={{ 
+                      width: `${skill.level}%`,
+                      animationDelay: `${index * 0.2}s`
+                    }}
+                  ></div>
                 </div>
               </div>
-            ))}
-          </div>
-
-          {/* Decorative Elements */}
-          <div className="relative mt-16">
-            <div className="absolute top-0 left-1/4 w-6 h-6 bg-accent/20 rounded-full animate-float blur-sm"></div>
-            <div className="absolute bottom-0 right-1/3 w-8 h-8 bg-primary/15 rounded-full animate-sway blur-sm"></div>
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
