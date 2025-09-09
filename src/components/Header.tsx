@@ -38,8 +38,8 @@ export const Header = ({ scrollY }: HeaderProps) => {
       <nav className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="font-display font-bold text-xl text-foreground">
-            John Smith
+          <div className="font-display font-bold text-xl text-foreground tracking-tight">
+            Ali Nasr
           </div>
 
           {/* Desktop Navigation */}

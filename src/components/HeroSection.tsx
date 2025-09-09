@@ -18,32 +18,34 @@ export const HeroSection = () => {
           {/* Content */}
           <div className="space-y-8 animate-slide-up">
             <div>
-              <p className="text-lg text-muted-foreground mb-2">Hello, I'm John.</p>
-              <h1 className="font-display font-bold text-hero text-foreground leading-tight mb-4">
-                <span className="text-primary">Product</span>
+              <p className="text-lg text-muted-foreground mb-3 font-medium">Hello, I'm Ali Nasr</p>
+              <h1 className="font-display font-bold text-hero text-foreground leading-tight mb-6">
+                <span className="text-primary">Creative</span>
                 <br />
-                Designer
+                <span className="text-accent">Developer</span>
               </h1>
-              <p className="text-xl text-muted-foreground">
-                based in Netherlands.
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                Crafting exceptional digital experiences<br />
+                <span className="text-primary font-medium">with precision and passion.</span>
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 onClick={handlePhysicsButton}
-                className="physics-btn minimal-btn bg-accent text-accent-foreground hover:bg-accent/90 font-medium"
+                className="physics-btn minimal-btn bg-primary text-primary-foreground hover:bg-primary/90 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                Resume
+                <Download className="w-4 h-4 mr-2" />
+                Download CV
               </Button>
               
               <Button 
                 variant="outline" 
                 onClick={handlePhysicsButton}
-                className="physics-btn minimal-btn border-border text-foreground hover:bg-secondary"
+                className="physics-btn minimal-btn border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold transition-all duration-300"
               >
                 <Mail className="w-4 h-4 mr-2" />
-                Contact
+                Let's Connect
               </Button>
             </div>
           </div>

@@ -16,21 +16,21 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 20%;
 
-    /* Primary - Deep Blue */
-    --primary: 220 90% 25%;
+    /* Primary - Elegant Navy */
+    --primary: 230 85% 15%;
     --primary-foreground: 0 0% 100%;
     
-    /* Secondary - Light Gray */
-    --secondary: 210 10% 90%;
-    --secondary-foreground: 220 15% 20%;
+    /* Secondary - Sophisticated Gray */
+    --secondary: 210 8% 92%;
+    --secondary-foreground: 230 15% 25%;
 
     /* Muted Tones */
-    --muted: 210 10% 92%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 210 12% 94%;
+    --muted-foreground: 230 8% 50%;
 
-    /* Accent - Warm Yellow */
-    --accent: 45 95% 70%;
-    --accent-foreground: 220 15% 20%;
+    /* Accent - Luxury Gold */
+    --accent: 45 100% 65%;
+    --accent-foreground: 230 15% 25%;
 
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 100%;
